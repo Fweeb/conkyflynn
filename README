@@ -36,6 +36,9 @@ Then, regardless of which way you choose to do it, include the conky_flynn()
 function in whichever function you reference from the lua_draw_hook line in your
 .conkyrc file.
 
+To position Flynn in your Conky, adjust the left, top variables in
+conkyflynn.lua. They're currently set to my Conky config of 166, 100.
+
 
 KNOWN ISSUES
 
