@@ -13,7 +13,6 @@ require 'imlib2'
 
 function conky_flynn()
     scriptpath = debug.getinfo(1).source:match("@(.*)$"):sub(0, -15)
-    --print(scriptpath)
     left, top = 155, 10
     w, h = 48, 64
     if conky_window == nil then return end
