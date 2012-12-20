@@ -1,6 +1,6 @@
 # ConkyFlynn!
 
-![Flynn](flynn.png)
+![Flynn](https://raw.github.com/Fweeb/conkyflynn/master/flynn.png)
 
 This is a [currently rough] Conky port of the very cool [Flynn plugin for Gkrellm by Henryk Richter](http://bax.comlab.uni-rostock.de/en/projects/flynn.html). It's "a tiny system load meter". Flynn is a guy who suffers from your activity. The higher your processor load, the more he bleeds.
 
