@@ -34,5 +34,6 @@ Flynn's alpha channel doesn't quite work right yet. If Imlib2's blend context is
 
 ## TO DO
 
+  * Store previous update CPU load. If there's a dramatic increase in load between cycles, use Flynn's grimmace sprites.
   * Make Flynn clickable, so he smiles when clicked (just like the Gkrellm plugin. Alternatively, it might be fun to make smiling mean something different (e.g. new mail, IM, or some other notification).
   * Think of something fun for Flynn's "God Mode" sprite. The notifier idea above     might be viable here, too/instead.
