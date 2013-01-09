@@ -25,10 +25,22 @@ function conky_flynn()
 
     image = imlib_load_image(scriptpath .. 'flynn.picture_alpha_big.png')
     if image == nil then return end
+    update_num = tonumber(conky_parse('${updates}'))
+    if update_num == 6 then -- This assumes you call conkyflynn at updates > 5
+        cpulast = 0
+    else
+        cpulast = cpunow
+    end
+    cpunow = tonumber(conky_parse('${cpu}'))
+    if cpunow - cpulast > 5 then
+        offset = 3
+    else
+        offset = math.random(0,2)
+    end
     imlib_context_set_image(image)
     imlib_context_set_blend(0)
-    damage = math.floor((tonumber(conky_parse('${cpu}')) / 25) + 0.5)
-    buffer = imlib_create_cropped_image(0, h * (5 * (math.random(0,2))) + (h * damage), w, h)
+    damage = math.floor((cpunow / 25) + 0.5)
+    buffer = imlib_create_cropped_image(0, h * (5 * offset) + (h * damage), w, h)
     imlib_free_image()
     imlib_context_set_image(buffer)
 
